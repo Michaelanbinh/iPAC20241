@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPAC Measurement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Measurement</h1>
+            <div class="logo">
+                <button id="logout">Logout</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="node-id">Node ID:</label>
+            <select id="node-id">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <div class="input-fields">
+                <label for="ax">a<sub>x</sub>:</label>
+                <span id="ax">--</span> 
+                <label for="ay">a<sub>y</sub>:</label>
+                <span id="ay">--</span> 
+                <label for="az">a<sub>z</sub>:</label>
+                <span id="az">--</span> 
+            </div>
+
+            <div class="buttons">
+                <button id="send-request">Send Request</button>
+                
+                
+                <select id="export-options">
+                    <option value="all"> All (ax, ay, az)</option>
+                    <option value="ax"> a<sub>x</sub></option>
+                    <option value="ay"> a<sub>y</sub></option>
+                    <option value="az"> a<sub>z</sub></option>
+                </select>
+                <button id="export">Export</button>
+            </div>
+        </div>
+
+        <div class="graphs">
+            <div class="sequence-diagram">
+                <h3>Sequence Diagram</h3>
+                <canvas id="sequence-canvas"></canvas>
+            </div>
+            <div class="fft-diagram">
+                <h3>FFT Diagram</h3>
+                <canvas id="fft-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
